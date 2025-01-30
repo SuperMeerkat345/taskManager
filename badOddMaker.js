@@ -8,16 +8,10 @@ function isOdd (num) {\n`;
     
     for (let i = -1*n; i <= n; i += 2) {
         if (i == -1*n) {
-            code += 
-`    if (num == ${i}) {
-        return false;
-    }`;
+            code += `if(num==${i}){return false}`;
         }
         else { 
-        code += 
-`    else if (num == ${i}) {
-        return false;
-    }`;
+            code += `else if(num==${i}){return false}`;
         }
     }
 
@@ -25,7 +19,7 @@ function isOdd (num) {\n`;
 `\n\n    return true;
 }`
 
-    await fs.writeFile("./js/odd.js", code);
+    await fs.writeFile("./js/badOdd.js", code);
 }
 
 makeOddChecker(32766);
