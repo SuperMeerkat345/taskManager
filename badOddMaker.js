@@ -8,7 +8,7 @@ function isOdd (num) {\n`;
     
     for (let i = -1*n; i <= n; i += 2) {
         if (i == -1*n) {
-            code += `if(num==${i}){return false}`;
+            code += `   if(num==${i}){return false}`;
         }
         else { 
             code += `else if(num==${i}){return false}`;
@@ -16,7 +16,7 @@ function isOdd (num) {\n`;
     }
 
     code += 
-`\n\n    return true;
+`\n    return true;
 }`
 
     await fs.writeFile("./js/badOdd.js", code);
